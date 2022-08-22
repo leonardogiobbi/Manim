@@ -55,7 +55,6 @@ class Bhaskara(MovingCameraScene):
 
         # riduci
         self.play(self.camera.frame.animate.set(width=20).move_to(mid_point))
-        self.play(FadeOut(angle, run_time=0.2))
         self.wait()
         
         # prima copia triangolo
@@ -70,7 +69,7 @@ class Bhaskara(MovingCameraScene):
         # prima rotazione
         self.add(VGroup(d1c1, d2c1, d3c1))
         self.add(tri1)
-        self.play(Rotate(VGroup(d1c1, d2c1, d3c1),90*DEGREES,about_point=mid_point))
+        self.play(Rotate(VGroup(d1c1, d2c1, d3c1),90*DEGREES,about_point=mid_point), FadeOut(angle, run_time=0.3))
 
         # seconda copia triangolo
         d1c2 = d1c1.copy()
