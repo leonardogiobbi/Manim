@@ -1,2 +1,0 @@
-# Manim
-Python Manim animations
